@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+	<title>CodePlayer</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="style.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+	<div id="container">
+		<div id="titlebar">
+		 <div id="title">
+			CodePlayer
+		 </div>
+		 <div id="runButton">
+		   <button id="run">Run</button> 	
+		 </div>
+			<div id="menu">
+			 <ul>
+				<li class="selector selected" name="html">HTML</li>
+				<li class="selector" name="css">CSS</li>
+				<li class="selector" name="js">JS</li>
+				<li class="selector selected" name="result" style="borderright:none">Result</li>
+			 </ul>
+			</div>	 	
+		</div>	
+	<div class="break"></div>
+
+	<div class="codecontainer" id="htmlContainer">
+	 <span class="containerTitle">HTML</span>
+		<textarea class="code" id="html">
+		<div id="test">sdf</div>
+		</textarea>
+	</div>
+
+	<div class="codecontainer" id="cssContainer">
+		<span class="containerTitle">CSS</span>
+		<textarea class="code" id="css">
+			#test
+			{background:green;
+			}
+		</textarea>
+	</div>
+
+	<div class="codecontainer" id="jsContainer">
+		<span class="containerTitle">JS</span>
+			<textarea class="code" id="js">
+				alert(7);
+			</textarea>
+	</div>
+	<div class="codecontainer" id="resultContainer">
+		<span class="containerTitle">Result</span>
+		<div class="resultContainer">
+		<iframe id="resultFrame"></iframe>
+		</div>
+	</div>
+  </div>
+</body>
+</html>

@@ -4,7 +4,7 @@ $(document).ready(function(){
 	myFunction();
 	}																							
   });
-  $(".form-inline").submit(function(e){
+  $(".form").submit(function(e){
 	  console.log("submit function called");
 	  e.preventDefault();
   })
