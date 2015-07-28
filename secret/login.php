@@ -27,7 +27,6 @@
 					mysqli_query($link, $query);
 					$success="You've been signed up!";
 					$_SESSION['id']= mysqli_insert_id($link);
-					header("Location:mainpage.php");
 				}	
 				}
 				}
