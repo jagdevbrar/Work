@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description"  content="Hello.."/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X plus Z</title>
+<link href="css/jquery-ui.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">    
+<link href="css/main.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+</head>
+<body >
+    <div class="container"  ng-app="myApp" ng-controller="mainController as main">
+        <div>
+            <h1>Marvelous!</h1>
+        </div>
+        <div>
+            <p>Lorem Ipsum is simpke dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+        </div>
+        
+        <div class="addItemBig"> ADD AN ITEM</div>
+        
+        <div class="wrapperDiv">
+            <div class="generate-box">
+                <input class="enterText" 
+                       type="text" 
+                       ng-model="enterText"
+                       ng-minlength="3"
+                       placeholder="ENTER ITEM" 
+                       required/>    
+                <select class="columnSelect" name="singleSelect" id="singleSelect" ng-model="singleSelect" required>
+                    <option value="">CHOOSE COLUMN</option> 
+                    <option value="columnOne">Column 1</option> 
+                    <option value="columnTwo">Column 2</option>
+                </select>
+                
+                <button class="btn-group btn-group-lg addItem" ng-click="addItem();">ADD ITEM</button>
+                SEARCH AN ITEM
+                <input class="searchBox" type="text" placeholder="SEARCH" ng-model="searchText"/>
+            </div>
+            
+            <div class="generatedBox">
+                
+                 <div class="column1">
+                  <div class="columnhdr">Column 1</div>
+                    <div  class="item" ng-repeat="item in itemsOne |filter:searchText track by $index ">
+                        <div ng-class-odd="'odd'" ng-class-even="'even'">{{item | uppercase}}<span class="cross" ng-click="itemsOne.splice($index,1);">x</span></div>
+                    
+                    </div>
+                </div>  
+              
+                <div class="column2">
+                    <div class="columnhdr">Column 2</div>
+                        <div  class="item" ng-repeat="item in itemsTwo |filter:searchText track by $index ">
+                            <div ng-class-odd="'odd'" ng-class-even="'even'">{{item | uppercase}}<span class="cross" ng-click="itemsTwo.splice($index,1);">x</span></div>
+
+                        </div>
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+                
+                
+        </div>
+    </div>
+       
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,125 @@
+body {
+	background-color: #79818f;
+	font: 18px Merriweather, Helvetica, sans-serif;
+}
+.container {
+	margin: 100px auto;
+}
+h1 {
+	color: #fefefe;
+}
+p {
+	color: #87d1cb;
+	width: 40%;
+	text-align: justify;
+}
+.generate-box {
+	font: 12px bolder !important;
+	width: 20%;
+	float: left;
+	min-height: 300px;
+	color: #fbfbfc;
+	* {
+		border: 2px solid #fbfbfc;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 2px;
+		height: 30px;
+		width: 100%;
+		margin-bottom: 5px;
+		background: #9ba1ab;
+	}
+	#searchText {
+		border: none;
+		color: $white;
+	}
+}
+.generatedBox {
+	float: right;
+	background: #9ba1ab;
+	width: 78%;
+	padding: 2px;
+	border: 2px solid $white;
+}
+.enterText {
+	display: inline-block;
+	padding-left: 8px;
+}
+.searchBox {
+	display: inline-block;
+	margin-top: 10px;
+	padding-left: 8px;
+}
+.addItem {
+	margin-bottom: 25px;
+}
+.addItemBig {
+	border: 2px solid #9ba1ab;
+	height: 37px;
+	padding-top: 7px;
+	background: #9ba1ab;
+	text-align: center;
+	color: #fefefe;
+	margin-bottom: 20px;
+	background: linear-gradient(#bac3cf, #79818f);
+}
+.columnhdr {
+	height: 37px;
+	padding-top: 7px;
+	background: #9ba1ab;
+	text-align: center;
+	color: #fefefe;
+	background: linear-gradient(#bac3cf, #79818f);
+}
+::-webkit-input-placeholder {
+	color: #d7d9de;
+}
+:-moz-placeholder {
+	color: #d7d9de;
+}
+::-moz-placeholder {
+	color: #d7d9de;
+}
+:-ms-input-placeholder {
+	color: #d7d9de;
+}
+.columnSelect {
+	margin-bottom: 100px;
+}
+.clear {
+	clear: both;
+}
+.column1 {
+	width: 49.5%;
+	float: left;
+}
+.column2 {
+	width: 49.5%;
+	float: right;
+}
+.odd {
+	background: #f3f5f4;
+	color: #838b98;
+	height: 40px;
+	padding: 12px 0 0 15px;
+}
+.even {
+	background: #bac1c7;
+	color: #e5e4e2;
+	height: 40px;
+	padding: 12px 0 0 15px;
+}
+.cross {
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+	border: 2px solid #9ba1ab;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 6px;
+	padding: 0 4px;
+}
+.item {
+	position: relative;
+}
