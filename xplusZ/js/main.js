@@ -1,10 +1,12 @@
 (function(angular) {'use strict';
 angular.module('myApp', []).controller('mainController',function($scope) {
-      var vm = $scope;
+      var vm = this;
       vm.itemsOne = [];
       vm.itemsTwo = [];  
       vm.addItem = function(){
-          if(vm.singleSelect === "columnOne"){
+          
+       console.log("jagdev",vm.singleSelect);
+        if(vm.singleSelect === "columnOne"){
               vm.itemsOne.push(vm.enterText);
                console.log("Column one",vm.itemsOne);
               localStorage.setItem("column1", vm.itemsOne);
@@ -12,7 +14,7 @@ angular.module('myApp', []).controller('mainController',function($scope) {
           }
           else if(vm.singleSelect === "columnTwo")
                 vm.itemsTwo.push(vm.enterText);
-                 console.log("Column 2",vm.itemsTwo);
+                console.log("Column 2",vm.itemsTwo);
                 localStorage.setItem("column2", vm.itemsTwo);
       }
       

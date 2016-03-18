@@ -11,8 +11,8 @@
 <link href="css/main.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 </head>
-<body >
-    <div class="container"  ng-app="myApp" ng-controller="mainController as main">
+<body ng-app="myApp">
+    <div class="container"   ng-controller="mainController as main">
         <div>
             <h1>Marvelous!</h1>
         </div>
@@ -26,17 +26,17 @@
             <div class="generate-box">
                 <input class="enterText" 
                        type="text" 
-                       ng-model="enterText"
+                       ng-model="main.enterText"
                        ng-minlength="3"
                        placeholder="ENTER ITEM" 
                        required/>    
-                <select class="columnSelect" name="singleSelect" id="singleSelect" ng-model="singleSelect" required>
+                <select class="columnSelect" name="singleSelect" id="singleSelect" ng-model="main.singleSelect" required>
                     <option value="">CHOOSE COLUMN</option> 
                     <option value="columnOne">Column 1</option> 
                     <option value="columnTwo">Column 2</option>
                 </select>
                 
-                <button class="btn-group btn-group-lg addItem" ng-click="addItem();">ADD ITEM</button>
+                <button class="btn-group btn-group-lg addItem" ng-click="main.addItem();">ADD ITEM</button>
                 SEARCH AN ITEM
                 <input class="searchBox" type="text" placeholder="SEARCH" ng-model="searchText"/>
             </div>
@@ -45,16 +45,16 @@
                 
                  <div class="column1">
                   <div class="columnhdr">Column 1</div>
-                    <div  class="item" ng-repeat="item in itemsOne |filter:searchText track by $index ">
-                        <div ng-class-odd="'odd'" ng-class-even="'even'">{{item | uppercase}}<span class="cross" ng-click="itemsOne.splice($index,1);">x</span></div>
+                    <div  class="item" ng-repeat="item in main.itemsOne |filter:searchText track by $index ">
+                        <div ng-class-odd="'odd'" ng-class-even="'even'">{{item | uppercase}}<span class="cross" ng-click="main.itemsOne.splice($index,1);">x</span></div>
                     
                     </div>
                 </div>  
               
                 <div class="column2">
                     <div class="columnhdr">Column 2</div>
-                        <div  class="item" ng-repeat="item in itemsTwo |filter:searchText track by $index ">
-                            <div ng-class-odd="'odd'" ng-class-even="'even'">{{item | uppercase}}<span class="cross" ng-click="itemsTwo.splice($index,1);">x</span></div>
+                        <div  class="item" ng-repeat="item in main.itemsTwo |filter:searchText track by $index ">
+                            <div ng-class-odd="'odd'" ng-class-even="'even'">{{item | uppercase}}<span class="cross" ng-click="main.itemsTwo.splice($index,1);">x</span></div>
 
                         </div>
                 </div>
